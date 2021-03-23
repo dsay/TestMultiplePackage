@@ -1,0 +1,14 @@
+//
+//  File.swift
+//  
+//
+//  Created by Dmitriy on 23.03.2021.
+//
+
+import Foundation
+import MyLibrary
+
+class User: Some {
+    
+    var name: String = "Test"
+}
