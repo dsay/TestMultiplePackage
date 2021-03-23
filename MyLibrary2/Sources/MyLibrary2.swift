@@ -8,6 +8,6 @@
 import Foundation
 
 
-protocol protocol Some2 {
+public protocol Some2 {
     
 }
