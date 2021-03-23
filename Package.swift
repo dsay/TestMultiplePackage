@@ -13,6 +13,9 @@ let package = Package(
         .library(
             name: "MyLibrary1",
             targets: ["MyLibrary1"]),
+        .library(
+            name: "MyLibrary2",
+            targets: ["MyLibrary2"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -27,6 +30,9 @@ let package = Package(
         .target(
             name: "MyLibrary1",
             dependencies: ["MyLibrary"]),
+        .target(
+            name: "MyLibrary2",
+            dependencies: []),
         .testTarget(
             name: "MyLibraryTests",
             dependencies: ["MyLibrary"]),
