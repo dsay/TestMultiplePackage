@@ -27,19 +27,18 @@ let package = Package(
         .target(
             name: "MyLibrary",
             dependencies: [],
-            path: "MyLibrary/Sources"),
+            path: "MyLibrary/Sources",
+            exclude: ["MyLibrary1", "MyLibrary2"]),
         .target(
             name: "MyLibrary1",
             dependencies: ["MyLibrary"],
-            path: "MyLibrary1/Sources"),
+            path: "MyLibrary1/Sources",
+            exclude: ["MyLibrary", "MyLibrary2"]),
 
         .target(
             name: "MyLibrary2",
             dependencies: [],
-            path: "MyLibrary2/Sources"),
-        
-        .testTarget(
-            name: "MyLibraryTests",
-            dependencies: ["MyLibrary"]),
+            path: "MyLibrary2/Sources",
+            exclude: ["MyLibrary1", "MyLibrary"]),
     ]
 )
