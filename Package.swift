@@ -17,6 +17,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
+        .package(name: "PromiseKit", url: "https://github.com/mxcl/PromiseKit.git", from: "6.13.3"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -34,7 +35,7 @@ let package = Package(
 
         .target(
             name: "MyLibrary2",
-            dependencies: [],
+            dependencies: ["PromiseKit"],
             path: "MyLibrary2/Sources",
             exclude: ["MyLibrary1", "MyLibrary"]),
     ]
